@@ -1,103 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SyD-la-wGO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photos-->
-        <scene sceneID="J79-wl-snU">
-            <objects>
-                <viewController storyboardIdentifier="ListingViewController" id="K7I-65-gOc" customClass="ListingViewController" customModule="LikePhoto" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2GD-69-zub">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="dpe-lx-eo8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Photos" id="eOv-e2-Jfm">
-                        <imageReference key="image" image="photo.on.rectangle.angled" catalog="system" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color systemColor="labelColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
-                    <connections>
-                        <outlet property="tableView" destination="2GD-69-zub" id="uCk-84-fCd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfS-lZ-rjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="458" y="374"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="Rct-5i-9TS">
-            <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="3dN-7X-X6X" customClass="ProfileViewController" customModule="LikePhoto" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rcz-SK-ZJJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="c1y-9i-BqB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="ddg-fO-NsJ">
-                        <imageReference key="image" image="person.fill" catalog="system" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color systemColor="labelColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
-                    <connections>
-                        <outlet property="tableView" destination="rcz-SK-ZJJ" id="fO3-PL-KP0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xyB-0I-0Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="458" y="-274"/>
-        </scene>
         <!--Main Tab Bar-->
-        <scene sceneID="DrF-eq-YII">
+        <scene sceneID="3MU-iW-BX7">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBar" id="30M-vE-QKN" customClass="MainTabBar" customModule="LikePhoto" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zPq-Ng-7uc">
+                <tabBarController storyboardIdentifier="MainTabBar" id="SyD-la-wGO" customClass="MainTabBar" customModule="InstaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rlg-EE-y3j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3dN-7X-X6X" kind="relationship" relationship="viewControllers" id="ijL-4M-d29"/>
-                        <segue destination="K7I-65-gOc" kind="relationship" relationship="viewControllers" id="5Ct-ww-N2r"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Jkh-wc-Ye9"/>
+                        <segue destination="RNv-4g-bWG" kind="relationship" relationship="viewControllers" id="1Vt-gE-NqD"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bdi-Vy-oTG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZY-1m-V3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-665" y="45"/>
+            <point key="canvasLocation" x="-3278" y="-417"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ListingViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ListingViewController" customModule="InstaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jBL-Pg-nyS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jBL-Pg-nyS" secondAttribute="trailing" id="GY8-9w-Zc7"/>
+                            <constraint firstItem="jBL-Pg-nyS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fKb-qm-XEC"/>
+                            <constraint firstItem="jBL-Pg-nyS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p3Y-8x-rY5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jBL-Pg-nyS" secondAttribute="bottom" id="xHA-mR-ZlO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Photos" image="photo.on.rectangle" catalog="system" id="Dk7-tZ-6X9"/>
+                    <navigationItem key="navigationItem" id="SeX-S1-2Pc"/>
+                    <connections>
+                        <outlet property="tableView" destination="jBL-Pg-nyS" id="Ymj-1w-cTU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2165" y="13"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="cop-2v-u5b">
+            <objects>
+                <viewController id="RNv-4g-bWG" customClass="ProfileViewController" customModule="InstaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZaL-fY-VU8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Btu-4s-UDQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RNv-4g-bWG" id="rWB-Yi-ftu"/>
+                                    <outlet property="delegate" destination="RNv-4g-bWG" id="eii-Q4-g4A"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xpD-1f-ajc"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Btu-4s-UDQ" firstAttribute="leading" secondItem="xpD-1f-ajc" secondAttribute="leading" id="Esg-H7-6SW"/>
+                            <constraint firstItem="xpD-1f-ajc" firstAttribute="bottom" secondItem="Btu-4s-UDQ" secondAttribute="bottom" id="JV5-1X-5uy"/>
+                            <constraint firstItem="Btu-4s-UDQ" firstAttribute="top" secondItem="xpD-1f-ajc" secondAttribute="top" id="KNd-Ce-v0k"/>
+                            <constraint firstItem="xpD-1f-ajc" firstAttribute="trailing" secondItem="Btu-4s-UDQ" secondAttribute="trailing" id="T9H-KK-R9f"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.rectangle" catalog="system" id="ALh-0J-Ebh"/>
+                    <connections>
+                        <outlet property="tableView" destination="Btu-4s-UDQ" id="HSe-sX-WDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s04-3p-u4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2183" y="-852"/>
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="100"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
