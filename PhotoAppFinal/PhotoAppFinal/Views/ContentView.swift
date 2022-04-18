@@ -25,60 +25,6 @@ struct ContentView: View {
         ZStack {
             switch selectedIndex {
             case 0:
-//                NavigationView {
-//                    Text("First")
-//                        .navigationTitle("Login")
-//                }
-//                VStack{
-//                    Image("img")
-//                    Text("Sign In")
-//                        .fontWeight(.heavy)
-//                        .font(.largeTitle)
-//                        .padding([.top,.bottom], 20)
-//                    VStack(alignment: .leading){
-//                        VStack(alignment: .leading){
-//                            Text("Username")
-//                                .font(.headline)
-//                                .fontWeight(.light)
-//                                .foregroundColor(Color.black.opacity(0.75))
-//                            HStack{
-//                                TextField("Enter Username", text:$user)
-//                            }
-//                                Divider()
-//                        }.padding(.bottom, 15)
-//
-//                        VStack(alignment: .leading){
-//                            Text("Password")
-//                                .font(.headline)
-//                                .fontWeight(.light)
-//                                .foregroundColor(Color.black.opacity(0.75))
-//                        SecureField("Enter Password", text:$pass)
-//                        Divider()
-//                        }
-////                        HStack{
-////                             Spacer()
-////                             Button(action: {
-////                            }) {
-////                                Text("Forget Password?").foregroundColor(Color.gray.opacity(0.5))
-////                            }
-////                        }
-//                    }.padding(.horizontal, 28)
-//                    HStack{
-//                        Button(action: {
-//                        }) {
-//                            Text("Sign In")
-//                                .foregroundColor(.white)
-//                                .frame(width: UIScreen.main.bounds.width - 120)
-//                                .padding()
-//                        }.background(Color.green)
-//                            .clipShape(Capsule())
-//                            .padding(.top, 90)
-//                }.padding()
-//            }
-//            case 1:
-//                ScrollView {
-//                    Text("TEST")
-//                }
                 VStack(spacing: 0){
                     HStack{
                         if !self.expand{
@@ -86,8 +32,6 @@ struct ContentView: View {
                             Text("Photos")
                                 .font(.title2)
                                 .fontWeight(.bold)
-        //                    Text("Photos")
-        //                        .font(.caption)
                         }
                        .foregroundColor(.black)
                     }
@@ -213,17 +157,9 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.top)
                 
             default:
-//
-//                VStack() {
-//                    Text("My Photos")
-//                        .font(.title2)
-//                        .fontWeight(.bold)
-//
                     Text("Galery")
                         .font(.title2)
                         .fontWeight(.bold)
-                       
-                
                 }
             }
         }
@@ -239,12 +175,10 @@ struct ContentView: View {
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(selectedIndex == num ? Color(.label) :
                             .init(white: 0.8))
-//                Text("Login")
                 Spacer()
                 })
                 }
             }
-            
     }
     func SearchData(){
         let key = "bOQoPoZ9vJvmi4O80O1HzegbK0y00NGm0bPxjP0e4Kk"
@@ -300,7 +234,6 @@ class getData : ObservableObject{
         }
     
     func SearchData(url: String){
-        
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!)  {  (data, _, err) in
             if err != nil{

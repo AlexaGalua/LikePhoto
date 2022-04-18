@@ -17,17 +17,8 @@ struct LoginView: View {
                 .fontWeight(.heavy)
                 .font(.largeTitle)
                 .padding([.top,.bottom], 20)
-        
-//            Text("Email Address")
-//                        .font(.headline)
-//                        .fontWeight(.light)
-//                        .foregroundColor(Color.black.opacity(0.75))
             TextField("Email Address", text: $loginVM.credentials.email)
                 .keyboardType(.emailAddress)
-//            Text("Password")
-//                        .font(.headline)
-//                        .fontWeight(.light)
-//                        .foregroundColor(Color.black.opacity(0.75))
             SecureField("Password", text: $loginVM.credentials.password)
                     if loginVM.showProgressView {
                         ProgressView()
@@ -39,19 +30,8 @@ struct LoginView: View {
                 }
                 .disabled(loginVM.loginDisabled)
                 .padding(.bottom,20)
-//                Button(action: {
-//                }) {
-//                    loginVM.login { succes in }
-//                    Text("Sign In")
-//                        .foregroundColor(.white)
-//                        .frame(width: UIScreen.main.bounds.width - 120)
-//                        .padding()
-//                }.background(Color.green)
-//                    .clipShape(Capsule())
-//                    .padding(.top, 90)
                 .onTapGesture {
                         UIApplication.shared.endEditing()
-                    
         }
             Spacer()
         }
@@ -61,7 +41,6 @@ struct LoginView: View {
             .disabled(loginVM.showProgressView)
     }
 }
-
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
