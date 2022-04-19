@@ -15,6 +15,7 @@ struct PhotoAppFinalApp: App {
             if authentication.isValidated {
                 ContentView()
                     .environmentObject(authentication)
+                
             } else {
                 LoginView()
                     .environmentObject(authentication)
