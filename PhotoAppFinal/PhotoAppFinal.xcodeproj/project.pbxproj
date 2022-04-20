@@ -18,6 +18,8 @@
 		00A734BC280DC39500CCD087 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A734BB280DC39500CCD087 /* LoginView.swift */; };
 		00A734BE280DCA1600CCD087 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A734BD280DCA1600CCD087 /* Authentication.swift */; };
 		00A734C1280DE24400CCD087 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00A734C0280DE24400CCD087 /* SDWebImageSwiftUI */; };
+		00DC02CF280EDAE4000B7208 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC02CE280EDAE4000B7208 /* ImagePicker.swift */; };
+		00DC02D2280EDBE8000B7208 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00DC02D1280EDBE8000B7208 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,7 @@
 		00A734B9280DC08400CCD087 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		00A734BB280DC39500CCD087 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		00A734BD280DCA1600CCD087 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		00DC02CE280EDAE4000B7208 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DC02D2280EDBE8000B7208 /* SDWebImageSwiftUI in Frameworks */,
 				00A734C1280DE24400CCD087 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +69,7 @@
 		00A7349F280DB26600CCD087 /* PhotoAppFinal */ = {
 			isa = PBXGroup;
 			children = (
+				00DC02CE280EDAE4000B7208 /* ImagePicker.swift */,
 				00A734A0280DB26600CCD087 /* PhotoAppFinalApp.swift */,
 				00A734BD280DCA1600CCD087 /* Authentication.swift */,
 				00A734B4280DBC2000CCD087 /* Services */,
@@ -129,6 +134,7 @@
 			name = PhotoAppFinal;
 			packageProductDependencies = (
 				00A734C0280DE24400CCD087 /* SDWebImageSwiftUI */,
+				00DC02D1280EDBE8000B7208 /* SDWebImageSwiftUI */,
 			);
 			productName = PhotoAppFinal;
 			productReference = 00A7349D280DB26600CCD087 /* PhotoAppFinal.app */;
@@ -160,6 +166,7 @@
 			mainGroup = 00A73494280DB26600CCD087;
 			packageReferences = (
 				00A734BF280DE24300CCD087 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				00DC02D0280EDBE8000B7208 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 00A7349E280DB26600CCD087 /* Products */;
 			projectDirPath = "";
@@ -190,6 +197,7 @@
 				00A734A3280DB26600CCD087 /* ContentView.swift in Sources */,
 				00A734B6280DBC5B00CCD087 /* APIService.swift in Sources */,
 				00A734B3280DBBB200CCD087 /* Credentials.swift in Sources */,
+				00DC02CF280EDAE4000B7208 /* ImagePicker.swift in Sources */,
 				00A734B8280DBF1200CCD087 /* UIApplication+Extension.swift in Sources */,
 				00A734A1280DB26600CCD087 /* PhotoAppFinalApp.swift in Sources */,
 				00A734BC280DC39500CCD087 /* LoginView.swift in Sources */,
@@ -405,10 +413,23 @@
 				kind = branch;
 			};
 		};
+		00DC02D0280EDBE8000B7208 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		00A734C0280DE24400CCD087 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00A734BF280DE24300CCD087 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		00DC02D1280EDBE8000B7208 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 00A734BF280DE24300CCD087 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;

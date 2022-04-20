@@ -15,7 +15,7 @@ class APIService {
     func login(credentials: Credentials,
                completion: @escaping (Result<Bool,APIError>) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            if credentials.password == "password" {
+            if credentials.password == "111" {
                 completion(.success(true))
             } else {
                 completion(.failure(APIError.error))

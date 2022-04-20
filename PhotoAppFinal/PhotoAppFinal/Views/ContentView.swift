@@ -160,6 +160,7 @@ struct ContentView: View {
                     Text("Galery")
                         .font(.title2)
                         .fontWeight(.bold)
+                ImagePicker(sourceType: .photoLibrary)
                 }
             }
         }
